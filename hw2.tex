@@ -1,0 +1,111 @@
+\documentclass[reqno]{amsart} 
+\usepackage{amssymb,latexsym,amsmath,amscd,graphicx,setspace,amsthm,verbatim}
+\usepackage[margin = 3 cm]{geometry}
+
+
+\theoremstyle{plain}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}{Proposition}
+\newtheorem{corollary}{Corollary}
+\newtheorem{lemma}{Lemma}
+\newtheorem{conjecture}{Conjecture}
+\newtheorem{question}{Question}
+\newtheorem{problem}{Problem}
+      
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}
+
+\newenvironment{solution}{\paragraph{\emph{Solution}.}}{\hfill$\square$}
+
+
+\newenvironment{solution1}{\paragraph{\emph{Solution $1$}.}}{\hfill$\square$}
+\newenvironment{solution2}{\paragraph{\emph{Solution $2$}.}}{\hfill$\square$}
+\newenvironment{solution3}{\paragraph{\emph{Solution $3$}.}}{\hfill$\square$}
+
+\begin{document} 
+
+\title[Homework 2]{Homework 2 \\ First due date: None.  \\  Due date for the second submission:  None.}
+
+\date{\today} 
+\maketitle 
+
+Green's theorem apply more generally to piecewise $C^{1}$ curve, meaning the simple closed curve may have ``corners''.  In this case, to calculate the line integral along the curve, you have to find a parametrization for each of the ``pieces'' of the curve, calculate the line integral on each of these pieces separately and sum them up.
+
+\begin{problem}
+Evaluate the following line integral
+$$\int_{C} \langle y^{2}, x^{2} \rangle, $$
+where $C$ is the rectangle with vertices $(0,0)$, $(5,0)$, $(5,4)$ and $(0,4)$ in two ways:  directly and using Green's theorem.
+\end{problem}
+\begin{solution}
+
+\end{solution}
+
+
+\begin{problem}
+Use Green's theorem to evaluate
+$$\int_{C} \vec{F}, $$
+where $\vec{F}(x,y) = \langle y - \cos(y),x \sin(y) \rangle$ and $C$ is the circle 
+$$(x-3)^{2} + (y+4)^{2} = 4 $$
+oriented clockwise.
+\end{problem}
+\begin{solution}
+
+\end{solution}
+
+\begin{problem}
+Find ${\rm curl}(\vec{F})$, where
+$$\vec{F}(x,y,z) = \left\langle \frac{\sqrt{x}}{1 + z}, \frac{\sqrt{y}}{1+x}, \frac{\sqrt{z}}{1+y}\right\rangle. $$
+Is $\vec{F}$ irrotational?
+\end{problem}
+\begin{solution}
+
+\end{solution}
+
+\begin{problem}
+Is the vector field $\vec{F}(x,y,z) = \langle y^{2}z^{3},2xyz^{3},3xy^{2}z^{2} \rangle$ conservative?  Is it irrotational?  If it is conservative, find a potential function.
+\end{problem}
+\begin{solution}
+
+\end{solution}
+
+
+\begin{problem}
+Calculate the surface integral
+$$\int \int_{S} \langle xy,yz,zx\rangle, $$
+where $S$ is the part of the paraboloid of equation $z = 4 - x^{2} - y^{2}$ that lies above the square $0 \le x \le 1, 0 \le y \le 1$, and has upward orientation.
+\end{problem}
+\begin{solution}
+
+\end{solution}
+
+\begin{problem}
+Verify that Stokes' theorem is true for $\vec{F}(x,y,z) = \langle -y,x,-2\rangle$ and the surface $S$ is the cone of equation $z^{2} = x^{2}+y^{2}$, $0 \le z \le 4$, oriented downward.
+\end{problem}
+\begin{solution}
+
+\end{solution}
+
+\begin{problem}
+Calculate the divergence of the vector field $\vec{F}$ from Problem 3.
+\end{problem}
+\begin{solution}
+
+\end{solution}
+
+
+Just like line integrals can be extended to piecewise $C^{1}$ curves, surface integrals can also be extended to surfaces that can be broken down into $C^{1}$ pieces.
+\begin{problem}
+Verify that the divergence theorem is true for $\vec{F}(x,y,z) = \langle x^{2},-y,z \rangle$ and $E$ is the solid cylinder given by $y^{2} + z^{2} \le 9$ and $0 \le x \le 2$.
+\end{problem}
+\begin{solution}
+
+\end{solution}
+
+
+
+
+
+\end{document} 
+
+
+
