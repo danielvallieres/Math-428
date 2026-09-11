@@ -1,0 +1,129 @@
+\documentclass[reqno]{amsart} 
+\usepackage{amssymb,latexsym,amsmath,amscd,graphicx,setspace,amsthm,verbatim}
+\usepackage[margin = 3 cm]{geometry}
+
+
+\theoremstyle{plain}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}{Proposition}
+\newtheorem{corollary}{Corollary}
+\newtheorem{lemma}{Lemma}
+\newtheorem{conjecture}{Conjecture}
+\newtheorem{question}{Question}
+\newtheorem{problem}{Problem}
+      
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}
+
+\newenvironment{solution}{\paragraph{\emph{Solution}.}}{\hfill$\square$}
+
+
+\newenvironment{solution1}{\paragraph{\emph{Solution $1$}.}}{\hfill$\square$}
+\newenvironment{solution2}{\paragraph{\emph{Solution $2$}.}}{\hfill$\square$}
+\newenvironment{solution3}{\paragraph{\emph{Solution $3$}.}}{\hfill$\square$}
+
+\begin{document} 
+
+\title[Homework 3]{Homework 3 \\ First due date: September 17.  \\  Due date for the second submission:  September 24.}
+
+\date{\today} 
+\maketitle 
+
+
+\begin{problem}
+Consider the function $f:\mathbb{R} \rightarrow \mathbb{R}$ defined via 
+\begin{equation*}
+x \mapsto f(x) = 
+\begin{cases} 
+e^{-1/x}, &\text{if } x>0;\\
+0, &\text{if } x \le 0.
+\end{cases} 
+\end{equation*}
+\begin{enumerate}
+\item Show that $f$ is differentiable everywhere.
+\item What is $f'(0)$?
+\item Using an induction argument, show that $f^{(n)}(0) = 0$ for all $n \ge 0$.
+\item Is $f$ smooth at $x=0$?  Explain carefully.
+\item Is $f$ analytic at $x=0$?  Explain carefully.
+\end{enumerate}
+\end{problem}
+\begin{solution}
+
+\end{solution}
+
+In class, we defined a function $f:\mathbb{R}^{m} \rightarrow \mathbb{R}^{n}$ to be differentiable at $p \in \mathbb{R}^{m}$ if there exists a linear transformation $L:\mathbb{V}^{m} \rightarrow \mathbb{V}^{n}$ such that for all $\vec{v} \in \mathbb{V}^{m}$, one has
+$$f(p + \vec{v}) - f(p) = L(\vec{v}) + \varepsilon(\vec{v}), $$
+where $\varepsilon:\mathbb{V}^{m} \rightarrow \mathbb{V}^{n}$ is a function (an error term) satisfying
+$$\frac{||\varepsilon(\vec{v})||}{||\vec{v}||} \to 0 $$
+as $\vec{v} \to \vec{0}$.  Moreover, we showed that this linear transformation $L$ is unique if it exists.  It is called the derivative of $f$ at $p$ and is denoted by $Df_{p}$ or a similar notation.  In the next problem, you will go through such an example in details.
+
+\begin{problem}
+Throughout this problem, we let $f:\mathbb{R}^{2} \rightarrow \mathbb{R}^{2}$ be defined via
+$$(x,y) \mapsto f(x,y) = (x,x^{2} + y^{2}). $$
+\begin{enumerate}
+\item Consider the function $L:\mathbb{V}^{2} \rightarrow \mathbb{V}^{2}$ defined via
+$$\vec{v} = \langle v_{1},v_{2} \rangle \mapsto L(\vec{v}) = \langle v_{1},2v_{1} + v_{2} \rangle. $$
+Put your Math 235 hat on and show that $L$ is a linear transformation.
+\item Let now $p = (1,1)$.  For an arbitrary $\vec{v} = \langle v_{1}, v_{2} \rangle$ in $\mathbb{V}^{2}$, calculate
+$$f(p + \vec{v}) - f(p) - L(\vec{v}) \in \mathbb{V}^{2}. $$
+(You should get a two dimensional vector with coordinates expressed in terms of $v_{1}$ and $v_{2}$.)
+\item Let us denote the last expression $f(p + \vec{v}) - f(p) - L(\vec{v})$ by $\varepsilon(\vec{v})$.  (Note that $\varepsilon$ is a function from $\mathbb{V}^{2}$ to $\mathbb{V}^{2}$.)  Prove carefully that
+$$\frac{||\varepsilon(\vec{v})||}{||\vec{v}||} \to 0 $$
+as $\vec{v} \to \vec{0}$.
+\item Is $f$ differentiable at $p = (1,1)$?  Explain carefully.
+\item What is the derivative of $f$ at $p = (1,1)$?
+\end{enumerate}
+\end{problem}
+\begin{solution}
+
+\end{solution}
+
+The next problem will be useful for a topic we will discuss in class this coming week.  If you don't remember what it means for a function $f:A \rightarrow B$ to be \emph{injective} from Math 330, look it up first.
+
+\begin{problem}
+Consider the function $\gamma:\left(\frac{\pi}{2},\frac{5 \pi}{2} \right) \rightarrow \mathbb{R}^{2}$ defined via
+$$\theta \mapsto \gamma(\theta) = \left(\frac{\cos(\theta)}{1+\sin^{2}(\theta)},\frac{\sin(\theta) \cos(\theta)}{1+\sin^{2}(\theta)} \right). $$
+Show carefully that $\gamma$ is injective.
+\end{problem}
+\begin{solution}
+
+\end{solution}
+
+\flushleft
+{\bfseries Problems for graduate students (bonus points for undergraduate students)}
+
+\begin{problem}
+Show that a function $f:\mathbb{R}^{m} \rightarrow \mathbb{R}^{n}$ is continuous at $p \in \mathbb{R}^{m}$ if and only if all coordinate functions $f_{i}:\mathbb{R}^{m} \rightarrow \mathbb{R}$ for $i=1,\ldots,n$ are continuous at $p \in \mathbb{R}^{m}$.  (Recall:  a function $f:\mathbb{R}^{m} \rightarrow \mathbb{R}^{n}$ is continuous at $p \in \mathbb{R}^{m}$ if for all $\varepsilon > 0$, there exists $\delta > 0$ such that if $d_{\mathbb{R}^{m}}(x,p)< \delta$, then $d_{\mathbb{R}^{n}}(f(x),f(p))< \varepsilon$.)
+\end{problem}
+\begin{solution}
+
+\end{solution}
+
+\begin{problem}
+Show carefully that if $f:\mathbb{R}^{m} \rightarrow \mathbb{R}^{n}$ is differentiable at $p \in \mathbb{R}^{m}$ (according to the definition above), then $f$ is continuous at $p \in \mathbb{R}^{m}$.
+\end{problem}
+\begin{solution}
+
+\end{solution}
+
+\begin{problem}
+Show carefully that a function $f:\mathbb{R}^{m} \rightarrow \mathbb{R}^{n}$ is differentiable at $p \in \mathbb{R}^{m}$ if and only if all coordinate functions $f_{i}:\mathbb{R}^{m} \rightarrow \mathbb{R}$ for $i=1,\ldots,n$ are differentiable at $p \in \mathbb{R}^{m}$.  (Again: use the definition of differentiability from above.)   
+\end{problem}
+\begin{solution}
+
+\end{solution}
+
+
+
+
+
+
+
+
+
+
+
+\end{document} 
+
+
+
