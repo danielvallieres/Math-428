@@ -1,0 +1,114 @@
+\documentclass[reqno]{amsart} 
+\usepackage{amssymb,latexsym,amsmath,amscd,graphicx,setspace,amsthm,verbatim}
+\usepackage[margin = 3 cm]{geometry}
+
+
+\theoremstyle{plain}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}{Proposition}
+\newtheorem{corollary}{Corollary}
+\newtheorem{lemma}{Lemma}
+\newtheorem{conjecture}{Conjecture}
+\newtheorem{question}{Question}
+\newtheorem{problem}{Problem}
+      
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}
+
+\newenvironment{solution}{\paragraph{\emph{Solution}.}}{\hfill$\square$}
+
+
+\newenvironment{solution1}{\paragraph{\emph{Solution $1$}.}}{\hfill$\square$}
+\newenvironment{solution2}{\paragraph{\emph{Solution $2$}.}}{\hfill$\square$}
+\newenvironment{solution3}{\paragraph{\emph{Solution $3$}.}}{\hfill$\square$}
+
+\begin{document} 
+
+\title[Homework 4]{Homework 4 \\ Not due.}
+
+\date{\today} 
+\maketitle 
+
+
+\begin{problem}
+Let $C = \{(x,y) \in \mathbb{R}^{2} : y^{2} = x^{2}(x+1) \}$, and consider $\gamma: \mathbb{R} \smallsetminus \{ -1\} \rightarrow C$ given by
+$$t \mapsto \gamma(t) = (t^{2} - 1,t(t^{2} -1)). $$
+\begin{enumerate}
+\item Show carefully that $\gamma$ is a bijection.
+\item Explain why $\gamma$ is continuous.
+\item Find a formula for its inverse function $\gamma^{-1}:C \rightarrow \mathbb{R} \smallsetminus \{ -1\}$.  Is $\gamma^{-1}$ continuous everywhere??  Explain carefully.
+\item Is $\gamma$ a homeomorphism??
+\end{enumerate}
+\end{problem}
+(Trying to intersect the curve with lines of varying slope $y = tx$ might be helpful...)
+\begin{solution}
+
+\end{solution}
+
+\begin{problem}
+Consider the following subsets in $\mathbb{R}^{3}$, which we think of as being some sort of surfaces (a $2$-dimensional object):
+\begin{enumerate}
+\item $\{(x,y,z) \in \mathbb{R}^{3}:  z^{2} = x^{2} + y^{2} \}$,
+\item $\{(x,y,z) \in \mathbb{R}^{3}: x^{2} + y^{2} \le 1 \text{ and } z=0\}$,
+\item $\{(x,y,z) \in \mathbb{R}^{3}: xy=0 \text{ with } x \ge 0 \text{ and } y \ge 0\}$.
+\end{enumerate}
+Informally, tell me at what point $p$ of each of these subsets one can't find a local parametrization (satisfying the three required properties in the definition of a regular manifold) around $p$ with two parameters.  (You don't need to give a formal proof, but you can try if you'd like.)
+\end{problem}
+\begin{solution}
+
+\end{solution}
+
+
+
+\begin{problem}
+Here are four different smooth maps $\phi:\mathbb{R}^{2} \rightarrow \mathbb{R}^{3}$:
+\begin{enumerate}
+\item $\varphi(x,y) = (x,xy,y)$,
+\item $\varphi(x,y) = (x,x^{2},y + y^{3})$,
+\item $\varphi(x,y) = (x^{2},x^{3},y)$,
+\item $\varphi(x,y) = (\cos(2\pi x),\sin(2\pi x),y)$.
+\end{enumerate}
+For each of them, tell me if it is one-to-one and if its derivative is also injective at every point of $\mathbb{R}^{2}$.
+\end{problem}
+\begin{solution}
+
+\end{solution}
+
+
+
+\begin{problem}
+Consider the open set $U = \{(\theta,\varphi): 0 < \theta < 2 \pi, 0 < \varphi < \pi \} \subseteq \mathbb{R}^{2}$ and let $f:U \rightarrow \mathbb{R}^{3}$ be given by
+$$(\theta,\varphi) \mapsto f(\theta,\varphi) = (\sin(\varphi) \cos(\theta), \sin(\varphi) \sin(\theta), \cos(\varphi) ). $$
+\begin{enumerate}
+\item Calculate the Jacobian matrix of $f$ at any point $(\theta,\varphi) \in U$.
+\item Put your Math 235 hat on, and tell me if the rank of $Jf(\theta,\varphi)$ is always the same as $(\theta,\varphi)$ runs over all elements in $U$.  If yes, what is this common value?  (Make sure to give a thorough argument.)  Is the derivative $Df_{(\theta,\varphi)}$ injective at every $(\theta,\varphi) \in U$???
+\end{enumerate}
+\end{problem}
+\begin{solution}
+
+\end{solution}
+
+
+
+
+\begin{problem}
+Consider the mapping $\varphi:\mathbb{R}^{2} \rightarrow \mathbb{R}^{3}$ given by $(s,t) \mapsto \varphi(s,t) = (s+t,s-t,st)$.  Show carefully that $\varphi$ is a local parametrization (satisfying the three properties required in the definition of a regular manifold).
+\end{problem}
+\begin{proof}
+
+\end{proof}
+
+
+
+
+
+
+
+
+
+
+
+\end{document} 
+
+
+
