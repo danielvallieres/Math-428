@@ -1,0 +1,103 @@
+\documentclass[reqno]{amsart} 
+\usepackage{amssymb,latexsym,amsmath,amscd,graphicx,setspace,amsthm,verbatim}
+\usepackage[margin = 3 cm]{geometry}
+
+
+\theoremstyle{plain}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}{Proposition}
+\newtheorem{corollary}{Corollary}
+\newtheorem{lemma}{Lemma}
+\newtheorem{conjecture}{Conjecture}
+\newtheorem{question}{Question}
+\newtheorem{problem}{Problem}
+      
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}
+
+\newenvironment{solution}{\paragraph{\emph{Solution}.}}{\hfill$\square$}
+
+
+\newenvironment{solution1}{\paragraph{\emph{Solution $1$}.}}{\hfill$\square$}
+\newenvironment{solution2}{\paragraph{\emph{Solution $2$}.}}{\hfill$\square$}
+\newenvironment{solution3}{\paragraph{\emph{Solution $3$}.}}{\hfill$\square$}
+
+\begin{document} 
+
+\title[Homework 6]{Homework 6}
+
+\date{\today} 
+\maketitle 
+
+The goal of the first problem is to make sure we all understand the chain rule from Calculus III that I recalled in class.
+\begin{problem}
+Let $f:\mathbb{R}^{2} \rightarrow \mathbb{R}^{3}$ be defined via
+$$(x,y) \mapsto f(x,y) = (x+y,xy,x^{2}+y^{2}), $$
+and let $g:\mathbb{R}^{3} \rightarrow \mathbb{R}^{2}$ be defined via
+$$(u,v,w) \mapsto g(u,v,w) = (u^{2} + v, w + uv). $$
+\begin{enumerate}
+\item Find $Jf(x,y)$ and $Jg(u,v,w)$.
+\item Let $p=(1,2)$ and $q = f(p)$.  Write down
+$$Jf(p), Jg(q), Df_{p}, \text{ and } Dg_{q}. $$
+(Make sure to distinguish between a matrix and a linear transformation which is a function...)
+\item Calculate
+$$Jg(q) \cdot Jf(p) \text{ and } Dg_{q} \circ Df_{p}.$$
+\item Find a formula for $g \circ f:\mathbb{R}^{2} \rightarrow \mathbb{R}^{2}$.
+\item Calculate $J (g\circ f) (x,y)$, $J (g \circ f) (p)$ and also $D(g\circ f)_{p}$.
+\item Comparing (3) and (5), do we have the equalities
+$$J(g \circ f)(p) = Jg(q) \cdot Jf(p) \text{ and } D(g \circ f)_{p} = Dg_{q} \circ Df_{p}??$$
+If yes, did you expect to have such equalities?  Why??
+\end{enumerate}
+\end{problem}
+\begin{solution1}
+
+\end{solution1}
+
+
+The next problem will introduce a new surface.  It will be obtained by rotating a rotating object....(think hard about this geometrically as you go over the problem).
+\begin{problem}
+Remember that a counter-clockwise rotation of angle $\varphi$ in $\mathbb{R}^{2}$ can be described using the square matrix
+\begin{equation*}
+\begin{pmatrix}
+\cos \varphi & - \sin \varphi \\
+\sin \varphi & \cos \varphi
+\end{pmatrix}
+\end{equation*}
+\begin{enumerate}
+\item Describe in words what is the object parametrized by the function $\gamma:(-1,1) \rightarrow \mathbb{R}^{2}$ given by 
+$$t \mapsto (t+3,t).$$  
+You can even draw a picture.
+\item Describe in words what is the object parametrized by the function $(-1,1) \times (0,\pi/2) \rightarrow \mathbb{R}^{2}$ given by 
+$$(t, \varphi)  \mapsto (3 + t \cos(\varphi) - t\sin(\varphi), t \sin(\varphi) + t \cos(\varphi)).$$  
+You can even draw a picture.
+\item You should now have the image of a line segment spinning around the point $(3,0) \in \mathbb{R}^{2}$.  Imagine now that as the line segment is spinning around that point, the line segment itself is rotating around the $y$-axis just like what was happening for a surface of revolution.  Try to describe in words what is the object parametrized by the function $(-1,1) \times (0,2\pi) \mapsto \mathbb{R}^{3}$ given by
+$$(t,\theta) \mapsto \left(\left(3 + t \cos\frac{\theta}{2} - t \sin \frac{\theta}{2}\right)\cos \theta,t \sin \frac{\theta}{2} + t \cos \frac{\theta}{2},\left(3 + t \cos\frac{\theta}{2} - t \sin \frac{\theta}{2}\right)\sin \theta\right). $$
+Once you are done imagining with your own head, I would encourage you to go to Geogebra, google how to use the command Surface, and enter that equation in the 3D calculator to see this surface.
+\item Write down two local parametrizations carefully that would give the structure of a regular $2$-dimensional smooth manifold on this surface.
+\item If you are brave, go ahead pick one of the two and check that it satisfies the three usual conditions.
+\end{enumerate}
+\end{problem}
+\begin{solution1}
+
+\end{solution1}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\end{document} 
+
+
