@@ -1,0 +1,154 @@
+\documentclass[reqno]{amsart} 
+\usepackage{amssymb,latexsym,amsmath,amscd,graphicx,setspace,amsthm,verbatim}
+\usepackage[margin = 3 cm]{geometry}
+
+
+\theoremstyle{plain}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}{Proposition}
+\newtheorem{corollary}{Corollary}
+\newtheorem{lemma}{Lemma}
+\newtheorem{conjecture}{Conjecture}
+\newtheorem{question}{Question}
+\newtheorem{problem}{Problem}
+      
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}
+
+\newenvironment{solution}{\paragraph{\emph{Solution}.}}{\hfill$\square$}
+
+
+\newenvironment{solution1}{\paragraph{\emph{Solution $1$}.}}{\hfill$\square$}
+\newenvironment{solution2}{\paragraph{\emph{Solution $2$}.}}{\hfill$\square$}
+\newenvironment{solution3}{\paragraph{\emph{Solution $3$}.}}{\hfill$\square$}
+
+\begin{document} 
+
+\title[Homework 9]{Homework 9}
+
+\date{\today} 
+\maketitle 
+
+\begin{problem}
+Let $M \subseteq \mathbb{R}^{s}$ and $N \subseteq \mathbb{R}^{t}$ be two regular smooth manifolds in $\mathbb{R}^{s}$ and $\mathbb{R}^{t}$ of dimension $m$ and $n$, respectively.  In class, we defined what it means for a function
+$$f: M \rightarrow N $$ 
+to be a smooth morphism: if $f = (f_{1},\ldots, f_{t})$ for some functions $f_{i}: M \rightarrow \mathbb{R}$, one says that $f$ is a smooth map if $f_{i} \in \mathcal{C}^{\infty}(M)$ for all $i=1,\ldots,t$.  One way to get such a map is as follows:  start with a smooth function
+$$f: O \rightarrow \mathbb{R}^{t}$$
+where $O \subseteq \mathbb{R}^{s}$ is an open set containing $M$ and for which $f(M) \subseteq N$.
+\begin{enumerate}
+\item Explain why $F = f|_{M}: M \rightarrow N$ is a smooth morphism.
+\item Let $p \in M$ and take two local parametrizations
+$$\varphi: U \rightarrow V \cap M \text{ and } \psi: U_{1} \rightarrow V_{1} \cap N $$
+for which $p \in V \cap M$ and $F(p) \in V_{1} \cap N$.  The continuity of $F$ also implies that one can assume $F\circ \varphi(U) \subseteq V_{1} \cap N$ shrinking $U$ if necessary (you can accept that if that's not crystal clear to you).  Let $s \in U$ be such that $\varphi(s) = p$ and let $t \in U_{1}$ be such that $\psi(t) = F(p)$.  Now consider the function $f \circ \varphi: U \rightarrow \mathbb{R}^{t}$.  Explain why one has the equality
+$$Df_{p} \circ D\varphi_{s} = D\psi_{t} \circ D(\psi^{-1} \circ F \circ \varphi)_{s}. $$
+(Recall that in class, we pointed out that $\psi^{-1} \circ F \circ \varphi$ is a smooth function at $s$.)
+\item Using this last equality, explain why 
+$$Df_{p}(T_{p}M) \subseteq T_{F(p)}N. $$
+\item Explain why one has
+$$DF_{p} = Df_{p}|_{T_{p}M}. $$
+\end{enumerate}
+\end{problem}
+\begin{solution}
+
+\end{solution}
+
+As an application of the last problem, complete the following calculation from class that I did not finish.
+\begin{problem}
+Consider the two regular level sets $S^{2} = f^{-1}(0)$ and $M = g^{-1}(0)$, where 
+$$f(x,y,z) = x^{2} + y^{2} + z^{2} - 1 \text{ and } g(x,y,z) = x^{2} + \frac{y^{2}}{2^{2}} + \frac{z^{2}}{3^{2}} - 1.$$
+\begin{enumerate}
+\item Explain why the function $F:S^{2} \rightarrow M$ given by
+$$(x,y,z) \mapsto F(x,y,z) = (x,2y,3z) $$
+is a smooth morphism.
+\item For each $p \in S^{2}$, using Problem $1$, find its derivative
+$$DF_{p}: T_{p}S^{2} \rightarrow T_{F(p)} M. $$
+(Hint:  it should be a linear transformation of the form 
+$$\langle v_{1},v_{2}, v_{3} \rangle \mapsto DF_{p} ( \langle v_{1},v_{2},v_{3}\rangle ) = \langle ?,?,?\rangle,$$
+since both $T_{p}S^{2}$ and $T_{F(p)}M$ are linear subspaces of $\mathbb{V}^{3}$.)
+\end{enumerate}
+\end{problem}
+\begin{solution}
+
+\end{solution}
+
+\begin{problem}
+Consider the smooth function $f:\mathbb{R}^{3} \rightarrow \mathbb{R}$ given by $(x,y,z) \mapsto f(x,y,z) = z - x^{2} - y^{2} -1$.
+\begin{enumerate}
+\item Show that $0 \in \mathbb{R}$ is a regular value for $f$.
+\item Let $M = f^{-1}(0) \subseteq \mathbb{R}^{3}$.  What is the dimension of the regular smooth manifold $M$?
+\item Consider the function $X: M \rightarrow \mathbb{V}^{3}$ defined via
+$$(x,y,z) \mapsto X(x,y,z) = \langle z, x, 2xz + 2yx \rangle. $$
+Show that $X \in \mathfrak{X}(M)$.  (That is show that $X$ is a smooth vector field on $M$.)
+\end{enumerate}
+\end{problem}
+\begin{solution}
+
+\end{solution}
+
+\begin{problem}
+In class, we looked at $S^{1}$ viewed as the regular level set $S^{1} = f^{-1}(0)$, where $f$ is the smooth function $f:\mathbb{R}^{2} \rightarrow \mathbb{R}$ given by $(x,y) \mapsto f(x,y) = x^{2} + y^{2}  - 1$.  We showed that $X:S^{1} \rightarrow \mathbb{V}^{2}$ given by
+$$(x,y) \mapsto X(x,y) = \langle -y, x \rangle $$
+is a vector field on $S^{1}$.  (In other words, we checked that for all $(x,y) \in S^{1}$, one has $\langle -y,x \rangle \in T_{(x,y)}S^{1} = {\rm ker}( Df_{(x,y)})$.)
+\begin{enumerate}
+\item Consider the smooth function $h \in \mathcal{C}^{\infty}(S^{1})$ given by the restriction of the smooth function $(x,y) \mapsto ye^{x}$ originally defined on all of $\mathbb{R}^2$ down to $S^{1}$.  Find a formula for $Y = h \cdot X$, that is write
+$$Y(x,y) = \langle Y_{1}(x,y),Y_{2}(x,y)\rangle $$
+for two explicit functions $Y_{1}$ and $Y_{2}$.
+\item Calculate $Y(p) \in T_{p}S^{1}$ for 
+$$p = (1,0), (0,1), (-1,0), \text{ and } (0,-1) $$
+and draw $S^{1}$ and those four vectors in relation to $S^{1}$ as we did in class.
+\end{enumerate}
+\end{problem}
+\begin{solution}
+
+\end{solution}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\end{document} 
+
