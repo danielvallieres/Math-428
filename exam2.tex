@@ -1,0 +1,133 @@
+\documentclass[reqno]{amsart} 
+\usepackage{amssymb,latexsym,amsmath,amscd,graphicx,setspace,amsthm,verbatim,xcolor}
+\usepackage[margin = 3 cm]{geometry}
+
+
+\theoremstyle{plain}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}{Proposition}
+\newtheorem{corollary}{Corollary}
+\newtheorem{lemma}{Lemma}
+\newtheorem{conjecture}{Conjecture}
+\newtheorem{question}{Question}
+\newtheorem{problem}{Problem}
+      
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}
+
+\def\upint{\mathchoice%
+    {\mkern13mu\overline{\vphantom{\intop}\mkern7mu}\mkern-20mu}%
+    {\mkern7mu\overline{\vphantom{\intop}\mkern7mu}\mkern-14mu}%
+    {\mkern7mu\overline{\vphantom{\intop}\mkern7mu}\mkern-14mu}%
+    {\mkern7mu\overline{\vphantom{\intop}\mkern7mu}\mkern-14mu}%
+  \int}
+\def\lowint{\mkern3mu\underline{\vphantom{\intop}\mkern7mu}\mkern-10mu\int}
+
+
+\newenvironment{solution}{\paragraph{\emph{Solution}.}}{\hfill$\square$}
+
+
+\newenvironment{solution1}{\paragraph{\emph{Solution $1$}.}}{\hfill$\square$}
+\newenvironment{solution2}{\paragraph{\emph{Solution $2$}.}}{\hfill$\square$}
+\newenvironment{solution3}{\paragraph{\emph{Solution $3$}.}}{\hfill$\square$}
+
+\begin{document} 
+
+\title[Exam 2]{Exam 2}
+
+\date{\today} 
+\maketitle 
+
+
+\begin{problem}
+Consider the smooth function $f:\mathbb{R}^{4} \rightarrow \mathbb{R}^{2}$ given by
+$$(x,y,z,w) \mapsto f(x,y,z,w) = (x^{2}+4y^{2},z^{2} + 9w^{2}), $$
+and let $M = f^{-1}((5,10))$.
+\begin{enumerate}
+\item Show carefully that $(5,10) \in \mathbb{R}^{2}$ is a regular value for $f$.
+\item Explain why $M$ is a regular smooth manifold in $\mathbb{R}^{4}$.  What is its dimension?
+\item Consider the point $p = (1,1,1,1) \in M$.  Describe the tangent space $T_{p}M$ as the kernel of a linear transformation.
+\item Find a basis for $T_{p}M$.
+\end{enumerate}
+\end{problem}
+
+\begin{problem}
+Consider the unit sphere
+$$S^{2} = \{(x,y,z) \in \mathbb{R}^{3}: x^{2} + y^{2} + z^{2} = 1 \}. $$
+Let also 
+$$D = \{(u,v) \in \mathbb{R}^{2} : u^{2} + v^{2} < 1 \}, $$
+and consider the two maps $\varphi,\psi:D \rightarrow \mathbb{R}^{3}$ given 
+$$(u,v) \mapsto \varphi(u,v) = (u,v,\sqrt{1 -u^{2} - v^{2}}) \text{ and } (s,t) \mapsto \psi(s,t) = (s,\sqrt{1-s^{2}-t^{2}},t).$$
+You may assume that, after giving them the appropriate codomains, these maps are local parametrizations of $S^{2}$ satisfying the usual three conditions.
+\begin{enumerate}
+\item Describe the images of $\varphi$ and $\psi$ as subsets of $S^{2}$.
+\item Determine the exact domain and codomain of the transition map $\psi^{-1} \circ \varphi$.
+\item Find an explicit formula for this transition map and explain why it is smooth.
+\item Calculate the Jacobian matrix of this transition map at the point $(u,v) = (1/2,1/2)$.
+\end{enumerate}
+\end{problem}
+
+
+\begin{problem}
+Let $S^{2} \subseteq \mathbb{R}^{3}$ be the unit sphere viewed as the usual regular level set and consider
+$$M = \left\{(u,v,w) \in \mathbb{R}^{3}: \frac{u^{2}}{2} + \frac{v^{2}}{2} + \frac{w^{2}}{4} = 1 \right\}. $$
+Define $F:S^{2} \rightarrow M$ via
+$$(x,y,z) \mapsto F(x,y,z) = (x+y,x-y,2z). $$
+\begin{enumerate}
+\item Show that $M$ is a regular smooth manifold of dimension two.
+\item Explain why $F$ is a well-defined smooth morphism between regular manifolds.
+\item Let 
+$$p = \left(\frac{1}{\sqrt{2}},\frac{1}{\sqrt{2}},0 \right) \text{ and } q = F(p) \in M.$$
+Find a basis for $T_{p}S^{2}$ and a basis for $T_{q}M$.
+\item Find an explicit formula for the derivative
+$$DF_{p}:T_{p}S^{2} \rightarrow T_{q}M. $$
+\item Is $DF_{p}$ an isomorphism of vector spaces?  Make sure to explain your answer.  (Recall that an isomorphism is a bijective linear transformation.)
+\end{enumerate}
+\end{problem}
+
+
+
+\begin{problem}
+Consider once more the unit sphere $S^{2}$ and the function $X: S^{2} \rightarrow \mathbb{V}^{3}$ given by
+$$(x,y,z) \mapsto X(x,y,z) = \langle-z,0,x \rangle.$$
+\begin{enumerate}
+\item Show that $X(p) \in T_{p}S^{2}$ for all $p \in S^{2}$.
+\item Explain why $X$ is a smooth vector field on $S^{2}$, that is, why $X \in \mathfrak{X}(X^{2})$.
+\item Determine all points $p \in S^{2}$ for which $X(p) = \langle 0,0,0 \rangle$.  Calculate the vectors at the four points
+$$(1,0,0), \, \, (0,0,1), \, \, (-1,0,0), \, \, (0,0,-1), $$
+and sketch these four vectors in relation to the circle (obtained by intersecting the sphere with the $xz$-plane) in the $xz$-plane.
+\item Let $h \in \mathcal{C}^{\infty}(S^{2})$ be given by
+$$h(x,y,z) = \left(y - \frac{1}{2} \right)e^{x}, $$
+and consider $Y = h \cdot X$.  Explain why $Y \in \mathfrak{X}(X^{2})$ and find all points $p \in S^{2}$ for which $Y(p) = \langle 0,0,0 \rangle.$
+\end{enumerate}
+\end{problem}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\end{document} 
+
+
+
